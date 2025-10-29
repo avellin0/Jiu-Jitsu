@@ -1,0 +1,180 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 789px) {
+
+    #mb-alunos-page {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: sans-serif;
+    }
+
+    #mb-ap-header {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        padding: 0 5px;
+        font-size: 20px;
+        font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    #mb-lp-logo {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        height: 100%;
+        color: #192a46;
+    }
+
+    #mb-logo-icon {
+        width: 10%;
+        height: 60%;
+    }
+
+    #mb-ap-back-btn {
+        width: 30%;
+        height: 70%;
+        font-size: 12pt;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #007BFF;
+        color: #192a46;
+        border-radius: 10px;
+    }
+
+    #mb-ap-main-body {
+        width: 100%;
+        height: 65%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5%;
+        padding: 10% 0;
+    }
+
+    #mb-ap-main-title {
+        width: 90%;
+        font-size: 10pt;
+        color: #192a46;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    #mb-ap-search-bar {
+        width: 80%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 0 10px;
+    }
+
+    #mb-ap-search-input {
+        width: 85%;
+        height: 80%;
+        border: none;
+        font-size: 10pt;
+        outline: none;
+    }
+
+
+    #mb-ap-search-results {
+        width: 80%;
+        height: 60%;
+        overflow-y: auto;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .mb-ap-result-index {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: bold;
+    }
+
+    .mb-ap-result-value{
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .mb-ap-details{
+        width: 30%;
+        height: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #007BFF;
+        border-radius: 5px;
+        color: white;
+        font-size: 9pt;
+        font-weight: 600;
+    }
+
+    .mb-ap-search-result-alunos {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .mb-ap-result-value p{
+    color: #555;        
+    }
+
+    .mb-ap-search-check {
+        width: 15%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #mb-ap-action-buttons {
+        width: 90%;
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 5%;
+    }
+
+    .mb-ap-action-btns {
+        width: 80%;
+        height: 50%;
+        font-weight: bold;
+        font-size: 11pt;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .mb-ap-action-btns:nth-child(1) {
+        background-color: #007BFF;
+    }
+
+    .mb-ap-action-btns:nth-child(2) {
+        border: 1px solid #007BFF;
+        background-color: white;
+        color: #007BFF;
+    }
+
+
+}
