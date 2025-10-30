@@ -1,6 +1,20 @@
 import "./Alunos.css"
 import { useNavigate } from "react-router-dom";
+import { supabase } from "../../lib/supabase";
+import { useEffect, useState } from "react";
+
+
 export function Alunos() {
+
+    const [alunos, setAlunos] = useState<any[]>([])
+
+    const [alunosEscolhido, setAlunoEscolhido] = useState()
+    
+    useEffect(() => {
+        supabase.from('alunos').select('*').then(({ data }) => setAlunos(data || []))
+        console.log("esse é os dados do",alunos);
+        
+    }, [])
 
     const navigate = useNavigate()
     return (
@@ -8,15 +22,15 @@ export function Alunos() {
 
             <div id="mb-ap-header">
                 <div id="mb-lp-logo">
-                    <img src="./black-belt.png" alt="" id="mb-logo-icon"/>
+                    <img src="./black-belt.png" alt="" id="mb-logo-icon" />
                     <p>Ypê Jiu-Jitsu</p>
                 </div>
-                
+
                 <div id="mb-ap-back-btn" onClick={() => navigate("/historico")}>
                     <p>Voltar</p>
                 </div>
             </div>
-            
+
             <div id="mb-ap-main-body">
                 <div id="mb-ap-main-title">
                     <h1>Controle de Presenças</h1>
@@ -27,48 +41,26 @@ export function Alunos() {
                 </div>
 
                 <div id="mb-ap-search-results">
-                    <div className="mb-ap-search--result-alunos">
-                        <div><p>Davi Avelino</p></div>
-                        <div className="mb-ap-search-check">
-                            <div><p>👍</p></div>
-                            <div><p>👎</p></div>
-                        </div>
-                    </div>
-                    <div className="mb-ap-search--result-alunos">
-                        <div><p>Davi Avelino</p></div>
-                        <div className="mb-ap-search-check">
-                            <div><p>👍</p></div>
-                            <div><p>👎</p></div>
-                        </div>
-                    </div>
-                    <div className="mb-ap-search--result-alunos">
-                        <div><p>Davi Avelino</p></div>
-                        <div className="mb-ap-search-check">
-                            <div><p>👍</p></div>
-                            <div><p>👎</p></div>
-                        </div>
-                    </div>
-                    <div className="mb-ap-search--result-alunos">
-                        <div><p>Davi Avelino</p></div>
-                        <div className="mb-ap-search-check">
-                            <div><p>👍</p></div>
-                            <div><p>👎</p></div>
-                        </div>
-                    </div>
-                    <div className="mb-ap-search--result-alunos">
-                        <div><p>Davi Avelino</p></div>
-                        <div className="mb-ap-search-check">
-                            <div><p>👍</p></div>
-                            <div><p>👎</p></div>
-                        </div>
-                    </div>
-                    <div className="mb-ap-search--result-alunos">
-                        <div><p>Davi Avelino</p></div>
-                        <div className="mb-ap-search-check">
-                            <div><p>👍</p></div>
-                            <div><p>👎</p></div>
-                        </div>
-                    </div>
+                    {alunos.map((aluno,index) => (
+                        <>
+                            <div className="mb-ap-search--result-alunos">
+                                <div>
+                                    <p key={index}>{aluno.nome}</p>
+                                </div>
+
+                                <div className="mb-ap-search-alunos-info">
+                                    <div className="mb-ap-search-alunos-name-scope">
+                                        <p>{aluno.faixa}</p>
+                                    </div>
+
+                                    <div className="mb-ap-search-checkbox-scope">
+                                        <input type="checkbox" name="" className="mb-ap-search-checkbox" />
+                                    </div>
+                                </div>
+                            </div>
+                        </>
+                    ))}
+
                 </div>
 
                 <div id="mb-ap-action-buttons">

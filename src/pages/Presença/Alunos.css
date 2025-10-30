@@ -107,10 +107,28 @@
         border-bottom: 1px solid #ccc;
     }
 
-    .mb-ap-search-check{
-        width: 15%;
+    .mb-ap-search-alunos-info{
+        align-items: center;
+        width: 35%;
+        height: 80%;
         display: flex;
         justify-content: space-between;
+    }
+
+    .mb-ap-search-alunos-name-scope{
+        width: 50%;
+        font-size: 11pt;
+    }
+
+    .mb-ap-search-checkbox-scope{
+        height: 100%;
+        width: 40%;
+        border-radius: 5px;
+    }
+
+    .mb-ap-search-checkbox{
+        width: 100%;
+        height: 100%;
     }
 
     #mb-ap-action-buttons {

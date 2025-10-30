@@ -1,0 +1,21 @@
+{
+  "name": "Academia ype Jiu-Jitsu",
+  "short_name": "ype Jiu-Jitsu",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e3a8a",
+  "description": "Controle de presenças simplificado",
+  "icons": [
+    {
+      "src": "/black-belt.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/black-belt.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
