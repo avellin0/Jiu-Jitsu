@@ -7,8 +7,6 @@ import { useEffect, useState } from "react";
 export function Alunos() {
 
     const [alunos, setAlunos] = useState<any[]>([])
-
-    const [alunosEscolhido, setAlunoEscolhido] = useState()
     
     useEffect(() => {
         supabase.from('alunos').select('*').then(({ data }) => setAlunos(data || []))
