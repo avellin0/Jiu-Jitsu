@@ -17,7 +17,7 @@ export function CreateClass() {
                     </div>
 
                     <div id="mb-cc-history-btn" onClick={() => navigate("/")}>
-                        <p>Histórico</p>
+                        <button className="mb-header-btn" id="mb-cc-header-btn-text">Histórico</button>
                     </div>
                 </div>
 

@@ -47,7 +47,7 @@ export function AlunosPresente() {
         </div>
 
         <div id="mb-ap-back-btn" onClick={() => navigate("/historico")}>
-          <p>Voltar</p>
+          <button className="mb-header-btn">Voltar</button>
         </div>
       </div>
 

@@ -41,7 +41,7 @@ export function Frequencia() {
                     </div>
 
                     <div id="mb-ap-back-btn" onClick={() => navigate("/")}>
-                        <p>Voltar</p>
+                        <button className="mb-header-btn">Voltar</button>
                     </div>
                 </div>
 

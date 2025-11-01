@@ -54,6 +54,11 @@
         border-radius: 10px;
     }
 
+    #mb-cc-header-btn-text {
+        color: white;
+        font-size: 14pt;
+    }
+
     #mb-cc-main-body {
         border-radius: 5%;
         width: 80%;
