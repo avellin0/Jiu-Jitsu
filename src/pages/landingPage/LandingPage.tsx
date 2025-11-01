@@ -1,6 +1,5 @@
 import "./LandingPage.css"
 import { useNavigate } from "react-router-dom";
-
 export function LandingPage() {
 
     const navigate = useNavigate()
@@ -11,7 +10,7 @@ export function LandingPage() {
             <div id="mb-lp-header">
 
                 <div id="mb-lp-logo">
-                    <img src="./black-belt.png" alt="" id="mb-logo-icon" />
+                    <img src="./black-belt.png" alt="" id="mb-ld-logo-icon" />
                     <p>Academia ypê <br />jiu-jitsu</p>
                 </div>
 

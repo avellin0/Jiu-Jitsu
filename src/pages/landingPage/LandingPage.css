@@ -27,15 +27,16 @@
     }
 
     #mb-lp-logo {
+        height: 80%;
         width: 60%;
         display: flex;
         gap: 2.5%;
         font-weight: bold;
     }
 
-    #mb-logo-icon{
-        width: 10%;
-        height: 10%;
+    #mb-ld-logo-icon{
+        width: 15%;
+        height: 70%;
     }
 
     #mb-lp-access-system{
