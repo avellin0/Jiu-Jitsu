@@ -23,6 +23,10 @@ export function Frequencia() {
 
     }, [])
 
+    useEffect(() => {
+        console.log("alunos atualizados:", turmas);
+    }, [turmas]);
+
 
     const navigate = useNavigate()
 
@@ -58,20 +62,24 @@ export function Frequencia() {
                             </div>
 
                         </div>
-                        <div className="mb-ap-search-result-alunos">
-                            {turmas.map((turmas) => (
-                                <>
+                        {turmas.map((turmas) => (
+                            <>
+                                <div className="mb-ap-search-result-alunos">
+
                                     <div className="mb-ap-result-value">
                                         <p>{turmas.data}</p>
                                         <p>{turmas.presencas[0]?.count || 0}</p>
                                     </div>
-                                </>
-                            ))}
 
-                            <div className="mb-ap-details" onClick={() => navigate("/")}>
-                                <p>Ver Detalhes</p>
-                            </div>
-                        </div>
+                                    <div className="mb-ap-details" onClick={() => navigate(`/detalhes/${turmas.id}`)}>
+                                        <p>Ver Detalhes</p>
+                                    </div>
+                                </div >
+
+                            </>
+
+                        ))}
+
                     </div>
 
                     <div id="mb-ap-action-buttons">

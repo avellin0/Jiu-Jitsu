@@ -27,26 +27,26 @@ export function CreateClass() {
                 </div>
 
                 <div id="mb-cc-form-container">
-                    <div className="mb-cc-form-input" onClick={() => setSelectedClass(selectedClass === "Tarde Adulto" ? null : "Tarde Adulto")}>
+                    <div className="mb-cc-form-input" onClick={() => setSelectedClass(selectedClass === "tarde_adulto" ? null : "tarde_adulto")}>
                         <div className="mb-cc-form-input-header">
                             <img src="./people.png" alt="" className="mb-cc-img" />
                             <p>Tarde Adulto</p>
                         </div>
 
-                        {selectedClass === "Tarde Adulto" && (
+                        {selectedClass === "tarde_adulto" && (
                             <div className="mb-cc-check">
                                 <img src="./check.png" alt="" style={{width: "70%", height: "70%"}}/>
                             </div>
                         )}
                     </div>
 
-                    <div className="mb-cc-form-input" onClick={() => setSelectedClass(selectedClass === "Tarde Kids" ? null : "Tarde Kids")}>
+                    <div className="mb-cc-form-input" onClick={() => setSelectedClass(selectedClass === "tarde_Kids" ? null : "tarde_kids")}>
                         <div className="mb-cc-form-input-header">
                             <img src="./sunny.png" alt="" className="mb-cc-img" />
                             <p>Tarde Kids</p>
                         </div>
 
-                         {selectedClass === "Tarde Kids" && (
+                         {selectedClass === "tarde_kids" && (
                             <div className="mb-cc-check">
                                 <img src="./check.png" alt="" style={{width: "70%", height: "70%"}}/>
                             </div>
@@ -54,13 +54,13 @@ export function CreateClass() {
 
                     </div>
 
-                    <div className="mb-cc-form-input" onClick={() => setSelectedClass(selectedClass === "Noite Adulto" ? null : "Noite Adulto")}>
+                    <div className="mb-cc-form-input" onClick={() => setSelectedClass(selectedClass === "noite_adulto" ? null : "noite_adulto")}>
                         <div className="mb-cc-form-input-header">
                             <img src="./moon.png" alt="" className="mb-cc-img" />
                             <p>Noite Adulto</p>
                         </div>
 
-                         {selectedClass === "Noite Adulto" && (
+                         {selectedClass === "noite_adulto" && (
                             <div className="mb-cc-check">
                                 <img src="./check.png" alt="" style={{width: "70%", height: "70%"}}/>
                             </div>
@@ -70,7 +70,7 @@ export function CreateClass() {
                 </div>
 
                 <div id="mb-cc-next-btn-container">
-                    <button id="mb-cc-next-btn" onClick={() => navigate("/nova_turma_alunos")}>Proximo</button>
+                    <button id="mb-cc-next-btn" onClick={() => navigate(`/nova_turma_alunos/${selectedClass}`)}>Proximo</button>
                 </div>
 
                 

@@ -4,6 +4,7 @@ import { CreateClass } from "../pages/CriarTurma/CreateClass";
 import { Alunos } from "../pages/Presença/Alunos";
 import { NovoAluno } from "../pages/AdicionarAlunos/NovoAluno";
 import { Frequencia } from "../pages/frequency/Frequencia";
+import { AlunosPresente } from "../pages/AlunosQueForam/AlunosPresente";
 
 export const router = createBrowserRouter([
  {
@@ -19,11 +20,15 @@ export const router = createBrowserRouter([
     element: <CreateClass/>
  },
  {
-    path: "/nova_turma_alunos",
+    path: "/nova_turma_alunos/:turma",
     element: <Alunos/>
  },
  {
     path: "/novo_aluno",
     element: <NovoAluno/>
+ },
+ {
+   path: "/detalhes/:id",
+   element: <AlunosPresente/>
  }
 ])
