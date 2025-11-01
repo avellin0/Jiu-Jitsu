@@ -102,7 +102,7 @@ export function Alunos() {
                 </div>
             </div>
 
-            <div id="mb-ap-main-body">
+            <div id="mb-alunos-main-body">
                 <div id="mb-ap-main-title">
                     <h1>Controle de Presenças</h1>
                 </div>
