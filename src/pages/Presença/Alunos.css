@@ -53,7 +53,7 @@
 
     #mb-ap-main-body {
         width: 100%;
-        height: 65%;
+        height: 75%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -89,16 +89,16 @@
     }
 
 
-    #mb-ap-search-results{
+    #mb-aluno-search-results{
         width: 80%;
-        height: 60%;
+        height: 70%;
         overflow-y: auto;
         border: 1px solid #ccc;
         border-radius: 5px;
         padding: 10px;
     }
 
-    .mb-ap-search--result-alunos{
+    .mb-alunos-search--result-alunos{
         width: 100%;
         height: 20%;
         display: flex;

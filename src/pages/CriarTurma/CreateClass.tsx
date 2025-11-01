@@ -10,16 +10,18 @@ export function CreateClass() {
     return (
         <div id="mb-create-class-page">
 
-            <div id="mb-cc-header">
-                <div id="mb-lp-logo">
-                    <img src="./black-belt.png" alt="" id="mb-logo-icon"/>
-                    <p>Ypê Jiu-Jitsu</p>
+            <div id="mb-ap-header">
+                    <div id="mb-lp-logo">
+                        <img src="./black-belt.png" alt="" id="mb-logo-icon" />
+                        <p>Ypê Jiu-Jitsu</p>
+                    </div>
+
+                    <div id="mb-cc-history-btn" onClick={() => navigate("/")}>
+                        <p>Histórico</p>
+                    </div>
                 </div>
-                
-                <div id="mb-cc-history-btn" onClick={() => navigate("/historico")}>
-                    <p>Histórico</p>
-                </div>
-            </div>
+
+            {/*  */}
 
             <div id="mb-cc-main-body">
                 <div id="mb-cc-main-title">

@@ -2,7 +2,7 @@ import "./Alunos.css"
 import { useNavigate, useParams } from "react-router-dom";
 import { supabase } from "../../lib/supabase";
 import { useEffect, useState } from "react";
-
+import faixa from "../../../public/black-belt.png"
 
 export function Alunos() {
 
@@ -93,7 +93,7 @@ export function Alunos() {
 
             <div id="mb-ap-header">
                 <div id="mb-lp-logo">
-                    <img src="./black-belt.png" alt="" id="mb-logo-icon" />
+                    <img src={faixa} alt="" id="mb-logo-icon" />
                     <p>Ypê Jiu-Jitsu</p>
                 </div>
 
@@ -111,10 +111,10 @@ export function Alunos() {
                     <input type="text" placeholder="Buscar " id="mb-ap-search-input" />
                 </div>
 
-                <div id="mb-ap-search-results">
+                <div id="mb-aluno-search-results">
                     {alunos.map((aluno, index) => (
                         <>
-                            <div className="mb-ap-search--result-alunos" key={index}>
+                            <div className="mb-alunos-search--result-alunos" key={index}>
                                 <div>
                                     <p>{aluno.nome}</p>
                                 </div>

@@ -27,11 +27,24 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
+    #mb-cc-logo {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        height: 100%;
+        color: #192a46;
+    }
+
+    #mb-cc-logo-icon {
+        width: 10%;
+        height: 60%;
+    }
+
     #mb-cc-history-btn {
         width: 40%;
         height: 80%;
         display: flex;
-        align-items: center;    
+        align-items: center;
         justify-content: center;
         margin-left: auto;
         font-size: 14pt;

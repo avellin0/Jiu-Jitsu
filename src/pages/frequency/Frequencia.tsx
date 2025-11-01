@@ -84,7 +84,7 @@ export function Frequencia() {
 
                     <div id="mb-ap-action-buttons">
                         <button className="mb-ap-action-btns" id="mb-ap-action-btn-save" onClick={() => navigate("/nova_turma")}>Criar Novo Dia</button>
-                        <button className="mb-ap-action-btns">Ver mais</button>
+                        <button className="mb-ap-action-btns" onClick={() => alert("Fiquei com preguiça")}>Ver mais</button>
                     </div>
                 </div>
             </div>
