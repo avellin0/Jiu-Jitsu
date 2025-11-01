@@ -7,19 +7,31 @@ export function CreateClass() {
     const [selectedClass, setSelectedClass] = useState<string | null>(null);
     const navigate = useNavigate()
 
+
+    const handleClass = () => {
+        if (selectedClass === null) {
+            alert("Selecione um horário")
+            return
+        }
+        navigate(`/nova_turma_alunos/${selectedClass}`)
+
+
+    }
+
+
     return (
         <div id="mb-create-class-page">
 
             <div id="mb-ap-header">
-                    <div id="mb-lp-logo">
-                        <img src="./black-belt.png" alt="" id="mb-logo-icon" />
-                        <p>Ypê Jiu-Jitsu</p>
-                    </div>
-
-                    <div id="mb-cc-history-btn" onClick={() => navigate("/")}>
-                        <button className="mb-header-btn" id="mb-cc-header-btn-text">Histórico</button>
-                    </div>
+                <div id="mb-lp-logo">
+                    <img src="./black-belt.png" alt="" id="mb-logo-icon" />
+                    <p>Ypê Jiu-Jitsu</p>
                 </div>
+
+                <div id="mb-cc-history-btn" onClick={() => navigate("/")}>
+                    <button className="mb-header-btn" id="mb-cc-header-btn-text">Histórico</button>
+                </div>
+            </div>
 
             {/*  */}
 
@@ -37,7 +49,7 @@ export function CreateClass() {
 
                         {selectedClass === "tarde_adulto" && (
                             <div className="mb-cc-check">
-                                <img src="./check.png" alt="" style={{width: "70%", height: "70%"}}/>
+                                <img src="./check.png" alt="" style={{ width: "70%", height: "70%" }} />
                             </div>
                         )}
                     </div>
@@ -48,9 +60,9 @@ export function CreateClass() {
                             <p>Tarde Kids</p>
                         </div>
 
-                         {selectedClass === "tarde_kids" && (
+                        {selectedClass === "tarde_kids" && (
                             <div className="mb-cc-check">
-                                <img src="./check.png" alt="" style={{width: "70%", height: "70%"}}/>
+                                <img src="./check.png" alt="" style={{ width: "70%", height: "70%" }} />
                             </div>
                         )}
 
@@ -62,9 +74,9 @@ export function CreateClass() {
                             <p>Noite Adulto</p>
                         </div>
 
-                         {selectedClass === "noite_adulto" && (
+                        {selectedClass === "noite_adulto" && (
                             <div className="mb-cc-check">
-                                <img src="./check.png" alt="" style={{width: "70%", height: "70%"}}/>
+                                <img src="./check.png" alt="" style={{ width: "70%", height: "70%" }} />
                             </div>
                         )}
 
@@ -72,10 +84,10 @@ export function CreateClass() {
                 </div>
 
                 <div id="mb-cc-next-btn-container">
-                    <button id="mb-cc-next-btn" onClick={() => navigate(`/nova_turma_alunos/${selectedClass}`)}>Proximo</button>
+                    <button id="mb-cc-next-btn" onClick={() => handleClass()}>Proximo</button>
                 </div>
 
-                
+
             </div>
         </div>
     );
