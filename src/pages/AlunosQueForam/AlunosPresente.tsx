@@ -56,7 +56,7 @@ export function AlunosPresente() {
           <h1>Alunos Presentes</h1>
         </div>
 
-        <div id="mb-ap-search-results">
+        <div id="mb-alunosPresentes-search-results">
           {alunos.length === 0 && <p>Nenhum aluno presente.</p>}
           {alunos.map((a, i) => (
             <div className="mb-ap-search--result-alunos" key={i}>
