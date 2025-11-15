@@ -14,8 +14,6 @@ export function CreateClass() {
             return
         }
         navigate(`/nova_turma_alunos/${selectedClass}`)
-
-
     }
 
 

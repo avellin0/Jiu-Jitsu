@@ -107,8 +107,8 @@ export function Alunos() {
                     <h1>Controle de Presenças</h1>
                 </div>
 
-                <div id="mb-ap-search-bar">
-                    <input type="text" placeholder="Buscar " id="mb-ap-search-input" />
+                <div id="mb-alunos-search-bar">
+                    <input type="text" placeholder="Buscar " id="mb-alunos-search-input" />
                 </div>
 
                 <div id="mb-aluno-search-results">

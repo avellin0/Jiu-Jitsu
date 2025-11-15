@@ -4,6 +4,115 @@
     box-sizing: border-box;
 }
 
+@media screen and (min-width: 790px) {
+
+    #mb-add-body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        font-family: sans-serif;
+        background-color: #f5f7fa;
+    }
+
+    #mb-add-header {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        padding: 0 40px;
+        font-size: 26px;
+        justify-content: space-between;
+        font-weight: bold;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        background-color: white;
+    }
+
+    #mb-lp-logo {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        color: #192a46;
+        font-size: 26px;
+    }
+
+    #mb-logo-icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    #mb-add-scope {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        gap: 10%;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #mb-add-main-scope {
+        width: 40%;
+        padding: 40px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 25px;
+        color: #192a46;
+    }
+
+    #mb-add-main-info-scope {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .mb-add-main-info {
+        width: 100%;
+        font-size: 18pt;
+        font-weight: 600;
+        color: #444;
+    }
+
+    .mb-add-main-input {
+        width: 100%;
+        height: 45px;
+        padding: 8px 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 13pt;
+    }
+
+    #mb-add-save-btn-scope {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #mb-add-save-btn {
+        width: 100%;
+        height: 55px;
+        background-color: #007BFF;
+        border: none;
+        border-radius: 12px;
+        color: white;
+        font-size: 16pt;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    #mb-add-save-btn:hover {
+        background-color: #006ae0;
+    }
+
+}
+
+
 @media screen and (max-width: 789px) {
     #mb-add-body {
         width: 100%;
