@@ -14,7 +14,7 @@ export function LandingPage() {
                     <p>Academia ypê <br />jiu-jitsu</p>
                 </div>
 
-                <div id="mb-lp-access-system" onClick={() => navigate("/historico")}>
+                <div id="mb-lp-access-system" onClick={() => navigate("/login")}>
                     <p>Acessar Sistema</p>
                 </div>
             </div>
@@ -29,7 +29,7 @@ export function LandingPage() {
                 </div>
 
                 <div id="mb-lp-btn">
-                    <button onClick={() => navigate("/historico")}>Entrar Agora</button>
+                    <button onClick={() => navigate("/login")}>Entrar Agora</button>
                 </div>
             </div>
         </div>

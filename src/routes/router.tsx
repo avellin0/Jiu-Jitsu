@@ -5,6 +5,8 @@ import { Alunos } from "../pages/Presença/Alunos";
 import { NovoAluno } from "../pages/AdicionarAlunos/NovoAluno";
 import { Frequencia } from "../pages/frequency/Frequencia";
 import { AlunosPresente } from "../pages/AlunosQueForam/AlunosPresente";
+import { Login } from "../pages/login/Login";
+import { SignIn } from "../pages/SignIn/Sign";
 
 export const router = createBrowserRouter([
  {
@@ -12,7 +14,7 @@ export const router = createBrowserRouter([
     element: <LandingPage/>
  },
  {
-    path: "historico",
+    path: "/historico",
     element: <Frequencia/>
  },
  {
@@ -30,5 +32,13 @@ export const router = createBrowserRouter([
  {
    path: "/detalhes/:id",
    element: <AlunosPresente/>
+ },
+ {
+   path: "/login",
+   element: <Login/>
+ },
+ {
+   path: "/sign",
+   element: <SignIn/>
  }
 ])
