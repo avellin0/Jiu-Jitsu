@@ -1,15 +1,15 @@
-*{
-    padding:0;
-    margin:0;
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-span{
+span {
     cursor: pointer;
     color: #007BFF;
 }
 
-#login-page{
+#login-page {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -19,7 +19,7 @@ span{
     font-family: Arial, sans-serif;
 }
 
-#login-container{
+#login-container {
     height: 80%;
     width: 30%;
     gap: 5%;
@@ -32,7 +32,7 @@ span{
     border-radius: 8px;
 }
 
-#login-header{
+#login-header {
     width: 100%;
     height: 17.5%;
     display: flex;
@@ -42,18 +42,18 @@ span{
     font-weight: bold;
 }
 
-#login-header p{
+
+#login-header p {
     color: #7a7a7a;
 }
 
-
-#login-form{
+#login-form {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-#login-form p{
+#login-form p {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 8px;
@@ -68,7 +68,7 @@ span{
     border-radius: 4px;
 }
 
-#login-actions{
+#login-actions {
     width: 100%;
     height: 10%;
     display: flex;
@@ -87,7 +87,7 @@ span{
     cursor: pointer;
 }
 
-#login-separator{
+#login-separator {
     width: 100%;
     height: 10%;
     display: flex;
@@ -95,7 +95,7 @@ span{
     justify-content: center;
 }
 
-.login-divisor{
+.login-divisor {
     width: 100%;
     height: 1px;
     background-color: #ccc;
@@ -106,12 +106,12 @@ span{
 
 @media screen and (max-width: 789px) {
 
-    span{
+    span {
         cursor: pointer;
         color: #007BFF;
     }
 
-    #login-page{
+    #login-page {
         width: 100%;
         height: 100vh;
         display: flex;
@@ -122,7 +122,7 @@ span{
         padding: 20px;
     }
 
-    #login-container{
+    #login-container {
         width: 100%;
         height: auto;
         padding: 25px;
@@ -135,7 +135,7 @@ span{
         border-radius: 8px;
     }
 
-    #login-header{
+    #login-header {
         width: 100%;
         height: auto;
         display: flex;
@@ -147,18 +147,18 @@ span{
         font-weight: bold;
     }
 
-    #login-header p{
+    #login-header p {
         color: #7a7a7a;
         font-size: 14px;
     }
 
-    #login-form{
+    #login-form {
         width: 100%;
         display: flex;
         flex-direction: column;
     }
 
-    #login-form p{
+    #login-form p {
         display: flex;
         justify-content: flex-end;
         margin-bottom: 6px;
@@ -175,7 +175,7 @@ span{
         font-size: 16px;
     }
 
-    #login-actions{
+    #login-actions {
         width: 100%;
         height: auto;
         display: flex;
@@ -194,7 +194,7 @@ span{
         cursor: pointer;
     }
 
-    #login-separator{
+    #login-separator {
         width: 100%;
         height: auto;
         display: flex;
@@ -203,7 +203,7 @@ span{
         margin: 10px 0;
     }
 
-    .login-divisor{
+    .login-divisor {
         width: 100%;
         height: 1px;
         background-color: #ccc;
