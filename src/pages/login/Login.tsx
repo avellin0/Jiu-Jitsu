@@ -50,7 +50,7 @@ export function Login() {
                     <p>ou</p>
                     <div className="login-divisor" />
                 </div>
-
+                
 
                 <div>
                     <p>Não tem uma conta? <span onClick={() => navigate("/sign")}>Registre-se</span></p>

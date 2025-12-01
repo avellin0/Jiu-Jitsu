@@ -1,9 +1,24 @@
 import "./Sign.css"
 import { useNavigate } from "react-router-dom"
+import {useState} from "react"
 
 export function SignIn() {
 
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+
     const navigate = useNavigate()
+
+
+    const handleSignIn = () => {
+        if(name.length <= 0 || email.length <= 0 || password.length <= 0 ){
+            alert("Campos obrigatorios ")
+            throw new Error("Campos são obrigatorios")
+        }
+
+        navigate('/historico')
+    }
 
     return (
         <div id="sign-page">
@@ -15,13 +30,13 @@ export function SignIn() {
                 </div>
 
                 <div id="sign-form">
-                    <input type="text" placeholder="Nome" />
-                    <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Senha" />
+                    <input type="text" placeholder="Nome" required={true} onChange={(e) => setName(e.target.value)}/>
+                    <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)}/>
+                    <input type="password" placeholder="Senha" onChange={(e) => setPassword(e.target.value)}/>
                 </div>
 
                 <div id="sign-actions">
-                    <button onClick={() => navigate("/historico")}>Cadastrar</button>
+                    <button onClick={() => handleSignIn()}>Cadastrar</button>
                 </div>
 
                 <div id="sign-separator">

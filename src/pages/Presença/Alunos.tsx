@@ -4,7 +4,19 @@ import { supabase } from "../../lib/supabase";
 import { useEffect, useState } from "react";
 import faixa from "../../../public/black-belt.png"
 
+
+
+interface SearchProps {
+    id: number; nome: string; faixa: string; idade: number;
+}
+
+
 export function Alunos() {
+
+
+    const [Search, setSearch] = useState("")
+    const [SearchResult, setSearchResult] = useState<SearchProps[]>([])
+
 
     const [alunos, setAlunos] = useState<any[]>([])
     const [selecionados, setSelecionados] = useState<number[]>([])
@@ -13,10 +25,19 @@ export function Alunos() {
 
     useEffect(() => {
         supabase.from('alunos').select('*').then(({ data }) => setAlunos(data || []))
-        console.log("esse é os dados do", alunos);
-        console.log("turma:", turma);
+        // console.log("esse é os dados do", alunos);
+        // console.log("turma:", turma);        
 
     }, [])
+
+    useEffect(() => {
+        console.log("essa é a busca:", Search.slice(0, 1))
+
+        const result = alunos.filter((aluno) => aluno.nome.startsWith(Search.slice(0, 1)))
+
+        setSearchResult(result)
+
+    }, [Search])
 
 
     const handleCheck = (id: number) => {
@@ -108,34 +129,58 @@ export function Alunos() {
                 </div>
 
                 <div id="mb-alunos-search-bar">
-                    <input type="text" placeholder="Buscar " id="mb-alunos-search-input" />
+                    <input type="text" placeholder="Buscar " id="mb-alunos-search-input" onChange={(e) => setSearch(e.target.value)} />
                 </div>
 
                 <div id="mb-aluno-search-results">
-                    {alunos.map((aluno, index) => (
-                        <>
-                            <div className="mb-alunos-search--result-alunos" key={index}>
-                                <div>
-                                    <p>{aluno.nome}</p>
-                                </div>
 
-                                <div className="mb-ap-search-alunos-info">
-                                    <div className="mb-ap-search-alunos-name-scope">
-                                        <p>{aluno.faixa}</p>
+                    <>
+                        {Search.length > 0
+                            ? SearchResult.map((result, index) => (
+                                <div className="mb-alunos-search--result-alunos" key={index}>
+                                    <div>
+                                        <p>{result.nome}</p>
                                     </div>
-
-                                    <div className="mb-ap-search-checkbox-scope">
-                                        <input
-                                            className="mb-ap-search-checkbox"
-                                            type="checkbox"
-                                            checked={selecionados.includes(aluno.id)}
-                                            onChange={() => handleCheck(aluno.id)}
-                                        />
+                                    <div className="mb-ap-search-alunos-info">
+                                        <div className="mb-ap-search-alunos-name-scope">
+                                            <p>{result.faixa}</p>
+                                        </div>
+                                        <div className="mb-ap-search-checkbox-scope">
+                                            <input
+                                                className="mb-ap-search-checkbox"
+                                                type="checkbox"
+                                                checked={selecionados.includes(result.id)}
+                                                onChange={() => handleCheck(result.id)}
+                                            />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </>
-                    ))}
+                            ))
+
+                            : alunos.map((aluno, index) => (
+                                <div className="mb-alunos-search--result-alunos" key={index}>
+                                    <div>
+                                        <p>{aluno.nome}</p>
+                                    </div>
+                                    <div className="mb-ap-search-alunos-info">
+                                        <div className="mb-ap-search-alunos-name-scope">
+                                            <p>{aluno.faixa}</p>
+                                        </div>
+                                        <div className="mb-ap-search-checkbox-scope">
+                                            <input
+                                                className="mb-ap-search-checkbox"
+                                                type="checkbox"
+                                                checked={selecionados.includes(aluno.id)}
+                                                onChange={() => handleCheck(aluno.id)}
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </>
+
+
 
                 </div>
 
@@ -144,6 +189,6 @@ export function Alunos() {
                     <button className="mb-ap-action-btns" onClick={() => navigate("/novo_aluno")}>Adicionar Novo Aluno</button>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
